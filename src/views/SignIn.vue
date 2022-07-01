@@ -10,13 +10,12 @@
 <script setup>
 import Navbar from "../components/Navbar.vue";
 import { ref } from "vue";
-import { useStore } from "vuex";
+import store from "../store";
 import { useRouter } from 'vue-router'
 
 const email = ref("");
 const password = ref("");
 const error = ref(null);
-const store = useStore();
 const message = ref(null);
 const router = useRouter();
 

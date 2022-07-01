@@ -8,9 +8,8 @@ import Feed from "../views/Feed.vue";
 import Register from "../views/Register.vue";
 import SignIn from "../views/SignIn.vue";
 
-import { useStore } from "vuex";
+import store from "../store";
 
-const store = useStore();
 const router = createRouter({
 	history: createWebHistory(),
 	routes: [
@@ -32,13 +31,5 @@ const router = createRouter({
 		},
 	],
 });
-
-// router.beforeEach((to, from, next) => {
-// 	if(store.getters.user != null) {
-// 		next();
-// 	} else {
-// 		next("/signin");
-// 	}
-// });
 
 export default router;
