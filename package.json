@@ -8,8 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "firebase": "^9.8.2",
     "vue": "^3.2.25",
+    "vue-media-upload": "^1.1.4",
     "vue-router": "^4.0.15",
     "vuex": "^4.0.2",
     "vuex-persistedstate": "^4.1.0"

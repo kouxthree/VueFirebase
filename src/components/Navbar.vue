@@ -1,8 +1,8 @@
 <template>
   <div>
     <nav>
+      <router-link to="/"> Home </router-link> |
       <span v-if="isLoggedIn">
-        <router-link to="/"> Home </router-link> |
         <router-link to="/feed"> Feed </router-link> |
         <button @click="logout"> Logout </button>
         {{ getUsername() }}
@@ -13,15 +13,14 @@
       </span>
     </nav>
   </div>
-  
+
 </template>
 
 <script setup>
-import { useStore, mapGetters } from "vuex";
+import store from "../store";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
 
-const store = useStore();
 const router = useRouter();
 const isLoggedIn = ref(false);
 
@@ -37,7 +36,9 @@ const logout = async () => {
 }
 
 const getUsername = () =>  {
-  return store.getters.user.email;
+  let ret = '';
+  if(store.getters.user) ret = store.getters.user.email;
+  return ret;
 }
 </script>
 
