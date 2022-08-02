@@ -7,12 +7,17 @@
                 </label>
             </div>
             <div class="col-4">
+<<<<<<< HEAD
                 <button class="btn btn-success btn-sm float-right" ref="currentImage" :disabled="!previewImage"
                     @click="learnImage">
+=======
+                <button class="btn btn-success btn-sm float-right" ref="currentImage" :disabled="!previewImage" @click="learnImage">
+>>>>>>> 3ed28d79d5a6ed11aead6877aa9373a98a7c08a0
                     learn
                 </button>
             </div>
         </div>
+<<<<<<< HEAD
         <div v-if="progress" class="alert alert-secondary" role="alert">
             {{ progress }}
         </div>
@@ -35,12 +40,23 @@
             <button class="btn btn-success btn-sm float-right" @click="getresult">
                 getresult
             </button>
+=======
+        <div>
+            <img v-if="previewImage" class="preview my-3" :src="previewImage" alt="" />
+         </div>
+        <div>
+            <img v-if="analyzedImage" class="preview my-3" :src="analyzedImage" alt="" />
+        </div>
+        <div v-if="message" class="alert alert-secondary" role="alert">
+            {{ message }}
+>>>>>>> 3ed28d79d5a6ed11aead6877aa9373a98a7c08a0
         </div>
     </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+<<<<<<< HEAD
 import axios from "axios";
 import UploadFilesService from "../services/UploadFilesService.vue";
 import '@tensorflow/tfjs-backend-webgl';
@@ -55,6 +71,15 @@ const progress = ref(0);
 const currentImage = ref(undefined);
 const previewImage = ref(undefined);
 var UploadService = new UploadFilesService();
+=======
+
+const file = ref(null);
+const message = ref('');
+const analyzedImage = ref(undefined);
+
+const currentImage = ref(undefined);
+const previewImage = ref(undefined);
+>>>>>>> 3ed28d79d5a6ed11aead6877aa9373a98a7c08a0
 const selectImage = () => {
     currentImage.value = file.value.files[0];
     if(currentImage.value) {
@@ -66,6 +91,7 @@ const selectImage = () => {
     }
 }
 const learnImage = () => {
+<<<<<<< HEAD
     // if(previewImage.value) {
     //     analyzedImage.value = previewImage.value
     // } else {
@@ -213,4 +239,13 @@ async function detectFace() {
 //         analyzedImage.value = undefined;
 //     });
 // })
+=======
+    if(previewImage.value) {
+        analyzedImage.value = previewImage.value
+    } else {
+        analyzedImage.value = '';
+    }
+}
+
+>>>>>>> 3ed28d79d5a6ed11aead6877aa9373a98a7c08a0
 </script>

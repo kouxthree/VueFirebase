@@ -8,6 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@google-cloud/vision": "^2.4.2",
     "@tensorflow-models/blazeface": "0.0.7",
     "@tensorflow/tfjs": "^3.19.0",
@@ -20,6 +21,12 @@
     "vue-class-component": "^7.2.6",
     "vue-media-upload": "^1.1.4",
     "vue-property-decorator": "^9.1.2",
+=======
+    "axios": "^0.27.2",
+    "firebase": "^9.8.2",
+    "vue": "^3.2.25",
+    "vue-media-upload": "^1.1.4",
+>>>>>>> 3ed28d79d5a6ed11aead6877aa9373a98a7c08a0
     "vue-router": "^4.0.15",
     "vuex": "^4.0.2",
     "vuex-persistedstate": "^4.1.0"
